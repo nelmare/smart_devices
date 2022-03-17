@@ -1,0 +1,37 @@
+.btn {
+  display: inline-flex;
+  margin: 10px auto;
+  padding: 15px;
+  width: 100%;
+
+  font-family: $ff-robotocondensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+
+  color: $color-alice-blue;
+
+  border: none;
+  cursor: pointer;
+
+  transition: opacity $trans-default;
+
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+
+  &:disabled {
+    opacity: 0.5;
+
+    pointer-events: none;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover,
+    &:focus {
+      opacity: 0.8;
+    }
+  }
+}
