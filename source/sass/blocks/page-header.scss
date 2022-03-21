@@ -1,46 +1,43 @@
+//.page-header {
+//  position: relative;
+//}
+
 .page-header {
-  font-weight: 500;
-  line-height: 20px;
-  color: $color-default-alice-blue;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  padding: 0;
-  padding-top: 35px;
-  background-color: $color-default-tangaroa;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-
-  @media (min-width: 1024px) {
-    background-image: url("../img/content/intro-back-desktop@1x.jpg");
-
-    @include retina {
-      background-image: url("../img/content/intro-back-desktop@2x.jpg");
-    }
-  }
+  font-weight: 400;
+  line-height: 18px;
+  color: $color-alice-blue;
+  //display: flex;
+  //flex-direction: column;
+  //position: relative;
+  //padding: 30px 0 35px 0;
+  padding-top: 30px;
+  padding-bottom: 35px;
+  background: linear-gradient(180deg, $color-default-black-pearl 84.9%, $color-black-pearl-transparent 100%);
+  filter: drop-shadow(0px 4px 4px $color-black-transparent25);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 50;
 
   @include vp-1023 {
-    padding-top: 30px;
-    background-image: url("../img/content/intro-back-tablet@1x.jpg");
-
-    @include retina {
-      background-image: url("../img/content/intro-back-tablet@2x.jpg");
-    }
+    //padding: 20px 0 25px 0;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    position: static;
   }
 
   @include vp-767 {
-    padding-top: 0;
-    background-image: url("../img/content/intro-back-mobile@1x.jpg");
-
-    @include retina {
-      background-image: url("../img/content/intro-back-mobile@2x.jpg");
-    }
+    //padding: 15px 0 25px 0;
+    padding-top: 15px;
+    padding-bottom: 25px;
   }
 }
 
-.page-header__container {
-  @include vp-767 {
-    padding: 0;
-  }
-}
+//.page-header__container {
+//
+//
+//  @include vp-767 {
+//    padding: 0;
+//  }
+//}
+

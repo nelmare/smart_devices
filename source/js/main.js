@@ -1,8 +1,9 @@
 import {iosVhFix} from './utils/ios-vh-fix';
-import {toggleMenu} from './modules/mobile-menu';
 import {anchorsScroll} from './modules/anchors-scroll';
-import {localStorageDataSet} from './modules/form';
-import {userPhoneInputValidate} from './modules/phone-validate';
+// import {localStorageDataSet} from './modules/form';
+// import {userPhoneInputValidate} from './modules/phone-validate';
+import {initAccordion} from './modules/init-accordion';
+import {introBlock, introButton, onIntroButtonContentSet, changeIntroButtonContent} from './modules/button-content'
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -10,8 +11,10 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   // Modules
-  toggleMenu();
   anchorsScroll();
-  localStorageDataSet();
-  userPhoneInputValidate();
+  // localStorageDataSet();
+  // userPhoneInputValidate();
+  initAccordion();
+  onIntroButtonContentSet();
+  changeIntroButtonContent();
 });
