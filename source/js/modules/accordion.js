@@ -1,4 +1,3 @@
-// const initAccordion = () => {
 const accordion = (function (element) {
   const _getItem = function (elements, className) { // функция для получения элемента с указанным классом
     let element = undefined;
@@ -21,16 +20,16 @@ const accordion = (function (element) {
         // получаем необходимые данные
         const header = e.target,
           item = header.parentElement,
-          itemActive = _getItem(_items, 'show');
+          itemActive = _getItem(_items, 'is-shown');
         if (itemActive === undefined) { // добавляем класс show к элементу (в зависимости от выбранного заголовка)
-          item.classList.add('show');
+          item.classList.add('is-shown');
         } else {
           // удаляем класс show у ткущего элемента
-          itemActive.classList.remove('show');
+          itemActive.classList.remove('is-shown');
           // если следующая вкладка не равна активной
           if (itemActive !== item) {
             // добавляем класс show к элементу (в зависимости от выбранного заголовка)
-            item.classList.add('show');
+            item.classList.add('is-shown');
           }
         }
       },

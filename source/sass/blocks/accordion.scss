@@ -29,7 +29,7 @@
     }
 
     &::before {
-      content:"";
+      content: "";
       width: 15px;
       height: 1px;
       background-color: $color-default-alice-blue;
@@ -39,7 +39,7 @@
     }
 
     &::after {
-      content:"";
+      content: "";
       width: 15px;
       height: 1px;
       background-color: $color-default-alice-blue;
@@ -51,11 +51,18 @@
   }
 }
 
-.accordion__item.show {
+.accordion__item.is-shown {
   @include vp-767 {
     &::after {
       display: none;
     }
+  }
+}
+
+.accordion__item.is-nojs::before,
+.accordion__item.is-nojs::after {
+  @include vp-767 {
+    display: none;
   }
 }
 
@@ -94,7 +101,8 @@
   }
 }
 
-.accordion__item.show .accordion__content {
+.accordion__item.is-shown .accordion__content,
+.accordion__item.is-nojs .accordion__content {
   @include vp-767 {
     display: block;
   }
