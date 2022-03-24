@@ -56,8 +56,7 @@ textarea {
 // если в стилях уже используется box-shadow есть другое решение -
 // задать к списку транзишенов `background-color 10000000s ease-out`
 input:-webkit-autofill {
-  box-shadow: inset 0 0 0 1000px $color-default-alice-blue;
-
+  box-shadow: inset 0 0 0 1000px $color-pacific-blue;
   -webkit-text-fill-color: $color-white;
 }
 

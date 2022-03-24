@@ -52,40 +52,7 @@
   }
 }
 
-//.page-footer__logo {
-//  display: flex;
-//  width: 215px;
-//  height: 55px;
-//  margin-bottom: 30px;
-//
-//  @include vp-1023 {
-//    padding-top: 4px;
-//  }
-//
-//  @include vp-767 {
-//    margin-bottom: 21px;
-//    padding-top: 0;
-//  }
-//}
-
 .page-footer__wrapper img {
   width: 215px;
   height: 55px;
 }
-
-.page-footer__social {
-  //margin: 0 -4px 0 0;
-  //justify-self: flex-end;
-
-  @include vp-1023 {
-    //margin-right: -7px;
-  }
-
-  @include vp-767 {
-    //margin-right: 0;
-    //justify-self: flex-start;
-  }
-}
-
-
-

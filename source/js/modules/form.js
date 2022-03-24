@@ -1,31 +1,32 @@
-export const form = document.querySelector('.booking__form');
-export const userNameInput = form.querySelector('[name=name]');
-export const userEmailInput = form.querySelector('[name=e-mail]');
-export const userPhoneInput = form.querySelector('[name=phone]');
+export const forms = document.querySelectorAll('.form');
 
-const localStorageDataSet = () => {
-  if (form) {
-    let isStorageSupport = true;
+const validateForm = () => {
+  forms.forEach((form) => {
+    const userNameInput = form.querySelector('[name=name]');
+    const userPhoneInput = form.querySelector('[name=phone]');
 
-    try {
-      localStorage.getItem('name');
-    } catch (err) {
-      isStorageSupport = false;
-    }
-
-    form.addEventListener('submit', function (evt) {
-      if (!userNameInput.value || !userEmailInput.value || !userPhoneInput.value) {
-        evt.preventDefault();
-        form.offsetWidth = form.offsetWidth;
-      } else {
-        if (isStorageSupport) {
+    if (form) {
+      form.addEventListener('submit', function (evt) {
+        if (!userNameInput.value || !userPhoneInput.value) {
+          evt.preventDefault();
+          form.offsetWidth = form.offsetWidth;
+        } else {
           localStorage.setItem('name', userNameInput.value);
-          localStorage.setItem('email', userEmailInput.value);
           localStorage.setItem('phone', userPhoneInput.value);
         }
+      });
+    }
+
+    userPhoneInput.addEventListener('invalid', () => {
+      if (userPhoneInput.validity.patternMismatch) {
+        userPhoneInput.setCustomValidity('Номер телефона должен содержать 11 цифр');
+      } else if (userPhoneInput.validity.valueMissing) {
+        userPhoneInput.setCustomValidity('Обязательное поле');
+      } else {
+        userPhoneInput.setCustomValidity('');
       }
     });
-  }
+  });
 };
 
-export {localStorageDataSet};
+export {validateForm};

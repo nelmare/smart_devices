@@ -7,10 +7,10 @@ const onIntroButtonContentSet = () => {
   } else if (introButton && window.innerWidth >= 768) {
     introButton.textContent = 'Получить бесплатную консультацию';
   }
-}
+};
 
 const changeIntroButtonContent = () => {
-  window.addEventListener("resize", onIntroButtonContentSet);
-}
+  window.addEventListener('resize', onIntroButtonContentSet);
+};
 
-export {introBlock, introButton, onIntroButtonContentSet, changeIntroButtonContent}
+export {introBlock, introButton, onIntroButtonContentSet, changeIntroButtonContent};

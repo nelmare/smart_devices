@@ -12,13 +12,11 @@
 
 .about__container {
   display: grid;
-  //grid-template-columns: 12.2% 79.8%;
   grid-template-columns: 150px auto;
   column-gap: 8.4%;
   justify-items: center;
 
   @include vp-1023 {
-    //grid-template-columns: 47.5% 48%;
     column-gap: 3.9%;
   }
 
@@ -65,17 +63,8 @@
 }
 
 .about .about__image-container {
-  //max-width: 560px;
   height: 320px;
   align-self: start;
-
-  @include vp-1023 {
-    //min-width: 324px;
-    //width: 100%;
-    //height: 264px;
-    //justify-self: center;
-    //align-self: start;
-  }
 
   @include vp-767 {
     display: none;
@@ -94,11 +83,11 @@
   height: 170px;
 
   @include vp-1023 {
-    height: 257px
+    height: 257px;
   }
 
   @include vp-767 {
-    height: 203px
+    height: 203px;
   }
 }
 
@@ -108,10 +97,7 @@
   height: auto;
 }
 
-
-
-
-.about__button {
+.about button {
   line-height: 17px;
   border: 1px solid $color-deep-sky-blue;
   color: $color-deep-sky-blue;
@@ -130,5 +116,13 @@
     min-width: 160px;
     padding: 8px 15px;
     margin-top: 19px;
+  }
+
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      background-color: $color-deep-sky-blue;
+      color: $color-default-alice-blue;
+      opacity: 1;
+    }
   }
 }

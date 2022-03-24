@@ -16,8 +16,8 @@ const showText = () => {
         content.classList.add('is-hidden');
         showHideButton.textContent = 'Подробнее';
       }
-      return false;
     }
+    return false;
   });
 };
 

@@ -32,7 +32,6 @@
   }
 
   @include vp-767 {
-    //padding-top: 0;
     background-image: url("../img/content/intro-back-mobile@1x.png");
 
     @include retina {
@@ -101,6 +100,15 @@
   vertical-align: middle;
   width: auto;
   padding: 15px 27px 18px 27px;
+
+  &:hover {
+    background-color: $color-pacific-blue;
+    opacity: 1;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
 
   @include vp-1023 {
     margin-left: 6vw;

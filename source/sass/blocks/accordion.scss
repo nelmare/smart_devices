@@ -51,6 +51,11 @@
   }
 }
 
+.accordion__item:hover::before,
+.accordion__item:hover::after {
+  opacity: 0.8;
+}
+
 .accordion__item.is-shown {
   @include vp-767 {
     &::after {
@@ -170,7 +175,13 @@
   }
 }
 
-.accordion a.accordion__address {
+.accordion .accordion__link {
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.accordion .accordion__link--address {
   @include vp-767 {
     margin-bottom: 9px;
   }

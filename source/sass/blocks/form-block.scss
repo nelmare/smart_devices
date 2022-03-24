@@ -1,0 +1,120 @@
+.form-block {
+  padding-top: 166px;
+  padding-bottom: 229px;
+  color: $color-white;
+  background: linear-gradient(-40.7deg, $color-deep-sky-blue 66.4%, $color-cerulean 66.4%);
+
+  @include vp-1023 {
+    padding-top: 46px;
+    padding-bottom: 104px;
+    background: none;
+    background-color: $color-deep-sky-blue;
+  }
+
+  @include vp-767 {
+    padding-top: 48px;
+    padding-bottom: 52px;
+  }
+}
+
+.form-block__container {
+  display: grid;
+  grid-template-columns: 48.4%;
+  grid-template-rows: auto auto;
+  grid-row-gap: 35px;
+  justify-content: end;
+  position: relative;
+
+  @include vp-1023 {
+    grid-template-columns: 1fr;
+    grid-row-gap: 27px;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    grid-row-gap: 35px;
+    justify-items: start;
+  }
+
+  &::before {
+    content: "";
+    width: 510px;
+    height: 285px;
+    top: 18.2%;
+    left: 18.9%;
+    transform: translateX(-40%);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 26.4vw auto;
+  }
+
+  @media (min-width: 1921px) {
+    &::before {
+      background-size: 510px 285px;
+
+      @include retina {
+        background-size: 510px 285px;
+      }
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &::before {
+      background-image: url("../img/content/airplane-desktop@1x.png");
+
+      @include retina {
+        background-image: url("../img/content/airplane-desktop@2x.png");
+        background-size: 26.4vw auto;
+      }
+    }
+  }
+
+  @include vp-1023 {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.form-block article,
+.form-block .form-block__form {
+  margin-right: 10px;
+
+  @include vp-1023 {
+    margin-right: 0;
+  }
+}
+
+.form-block h2 {
+  margin: 0;
+  margin-left: -4px;
+  margin-bottom: 11px;
+  font-family: $ff-robotocondensed;
+  font-size: 36px;
+  line-height: 51px;
+  font-weight: 400;
+
+  @include vp-1023 {
+    margin-bottom: 5px;
+    margin-left: 0;
+  }
+
+  @include vp-767 {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
+
+.form-block p {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 22px;
+
+  @include vp-767 {
+    font-size: 14px;
+    line-height: 19px;
+  }
+}

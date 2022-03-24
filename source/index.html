@@ -32,7 +32,7 @@
                 <span>+7 (495) 000 52 52</span>
               </a>
             </address>
-            <a class="btn" href="#">Заказать звонок</a>
+            <a class="btn" href="#" data-open-modal="callback">Заказать звонок</a>
           </nav>
         </div>
       </header>
@@ -109,7 +109,7 @@
                   производимой внутри компании. Использование инновационных технологий помогает экономить деньги
                   и&nbsp;время наших клиентов</p>
               </div>
-              <button class="btn about__button" type="button" data-button="about" aria-label="Подробнее/Скрыть информацию">Подробнее</button>
+              <button class="btn" type="button" data-button="about" aria-label="Подробнее/Скрыть информацию">Подробнее</button>
             </div>
           </div>
         </section>
@@ -119,7 +119,7 @@
             <h2 data-heading="1">Smart Device предлагает следующие товары и&nbsp;услуги</h2>
             <ul>
               <li class="cards__item">
-                <a class="" href="#" aria-label="Узнать подробнее">
+                <a href="#" aria-label="Узнать подробнее">
                   <h3>Производство печатных плат</h3>
                   <div class="cards__image-wrapper">
                     <picture>
@@ -137,7 +137,7 @@
                 </a>
               </li>
               <li class="cards__item">
-                <a class="" href="#" aria-label="Узнать подробнее">
+                <a href="#" aria-label="Узнать подробнее">
                   <h3>Монтаж печатных плат</h3>
                   <div class="cards__image-wrapper">
                     <picture>
@@ -155,7 +155,7 @@
                 </a>
               </li>
               <li class="cards__item">
-                <a class="" href="#" aria-label="Узнать подробнее">
+                <a href="#" aria-label="Узнать подробнее">
                   <h3>Комплектующие для&nbsp;светотехники</h3>
                   <div class="cards__image-wrapper">
                     <picture>
@@ -188,13 +188,13 @@
               </div>
               <div class="form__group form__group--50w">
                 <input type="tel" name="phone" id="user-phone" placeholder="Телефон"
-                  minlength="11" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+                  minlength="11" pattern="^((\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
                 <label class="visually-hidden" for="user-phone">Телефон</label>
               </div>
-              <div class="form__group form__group--100w">
+              <div class="form__group">
                 <label class="visually-hidden" for="user-message">Ваш вопрос</label>
                 <textarea name="user-message" id="user-message"
-                  placeholder="Ваш вопро" rows="5"></textarea>
+                  placeholder="Ваш вопроc" rows="5"></textarea>
               </div>
               <div class="form__group form__group--footer">
                 <button class="btn" type="submit">Задать вопрос</button>
@@ -218,16 +218,19 @@
             <ul class="page-footer__social social">
               <li>
                 <a href="#" aria-label="Smart Device в Фейсбук">
+                  <!-- 1х: 30px-->
                   <img src="img/svg/icon-fb.svg" width="30" height="30" alt="Иконка Фейсбука">
                 </a>
               </li>
               <li>
                 <a href="#" aria-label="Smart Device в Одноклассниках">
+                  <!-- 1х: 30px-->
                   <img src="img/svg/icon-ok.svg" width="30" height="30" alt="Иконка Одноклассников">
                 </a>
               </li>
               <li>
                 <a href="#" aria-label="Smart Device в ВКонтакте">
+                  <!-- 1х: 30px-->
                   <img src="img/svg/icon-vk.svg" width="30" height="30" alt="Иконка ВКонтакте">
                 </a>
               </li>
@@ -274,10 +277,10 @@
               <h2 class="accordion__heading btn">Наш офис</h2>
               <article class="accordion__content accordion__content--contacts">
                 <address>
-                  <a href="#" class="accordion__address">г. Мытищи, Олимпийский проспект, д.10</a>
-                  <a href="tel:+84955894050">+7 (495) 589-40-50</a>
-                  <a href="tel:+89253895829">+7 (925) 389-58-29</a>
-                  <a href="tel:+89253647813">+7 (925) 364-78-13</a>
+                  <a href="#" class="accordion__link accordion__link--address">г. Мытищи, Олимпийский проспект, д.10</a>
+                  <a href="tel:+84955894050" class="accordion__link">+7 (495) 589-40-50</a>
+                  <a href="tel:+89253895829" class="accordion__link">+7 (925) 389-58-29</a>
+                  <a href="tel:+89253647813" class="accordion__link">+7 (925) 364-78-13</a>
                 </address>
               </article>
             </section>
@@ -285,30 +288,30 @@
         </div>
       </footer>
     </div>
-    <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal modal--preload" data-modal="callback">
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
           <h3>Закажите звонок</h3>
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
-          <form class="form-block__form form" action="https://echo.htmlacademy.ru" method="post">
+          <form class="form form--modal" action="https://echo.htmlacademy.ru" method="post">
             <div class="form__group form__group--50w">
-              <input type="text" name="name" id="user-name-callback" placeholder="Имя" required>
+              <input type="text" name="name" id="user-name-callback" placeholder="Имя" required data-focus="1">
               <label class="visually-hidden" for="user-name-callback">Имя</label>
             </div>
             <div class="form__group form__group--50w">
               <input type="tel" name="phone" id="user-phone-callback" placeholder="Телефон"
-                minlength="11" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+                minlength="11" pattern="^((\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
               <label class="visually-hidden" for="user-phone-callback">Телефон</label>
             </div>
-            <div class="form__group form__group--100w">
+            <div class="form__group">
               <label class="visually-hidden" for="user-message-callback">Ваш вопрос</label>
               <textarea name="user-message" id="user-message-callback"
-                placeholder="Ваш вопро" rows="5"></textarea>
+                placeholder="Ваш вопроc" rows="5"></textarea>
             </div>
             <div class="form__group form__group--footer-modal">
-              <button class="btn" type="submit">Отправить</button>
-              <div class="form__checkbox-wrapper">
+              <button class="btn modal__btn" type="submit">Отправить</button>
+              <div class="form__checkbox-wrapper form__checkbox-wrapper--modal">
                 <label for="personal-data-callback">
                   <input class="visually-hidden" type="checkbox" name="consent-personal-data" id="personal-data-callback"
                     required checked>
@@ -318,6 +321,11 @@
               </div>
             </div>
           </form>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+            <svg width="20" height="20">
+              <use xlink:href="img/sprite_auto.svg#icon-close"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </div>

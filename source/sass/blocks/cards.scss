@@ -10,18 +10,16 @@
     padding-bottom: 75px;
   }
 
-  //@include vp-767 {
-  //  padding-top: 56px;
-  //  padding-bottom: 65px;
-  //}
+  @include vp-767 {
+    padding-top: 47px;
+    padding-bottom: 85px;
+  }
 }
 
 .cards h2 {
   margin: 0;
   padding: 0;
   margin-bottom: 53px;
-  //font-family: $ff-robotocondensed;
-  //font-weight: 400;
   font-size: 36px;
   line-height: 51px;
   font-weight: 400;
@@ -33,10 +31,10 @@
   @include vp-767 {
     font-size: 28px;
     line-height: 39px;
+    width: 71%;
+    margin-bottom: 30px;
   }
 }
-
-
 
 .cards ul {
   list-style: none;
@@ -53,25 +51,11 @@
     grid-template-rows: repeat(3, 250px);
     grid-gap: 30px;
   }
-
-  //@include vp-1023 {
-  //  grid-template-columns: repeat(2, 309px);
-  //  grid-gap: 30px;
-  //}
-  //
-  //@include vp-767 {
-  //  grid-template-columns: repeat(2, 270px);
-  //}
-  //
-  //@include vp-599 {
-  //  grid-template-columns: 270px;
-  //}
 }
 
 .cards__item {
   width: 100%;
   max-width: 350px;
-  //min-height: 386px;
   position: relative;
   font-size: 14px;
   line-height: 19px;
@@ -95,10 +79,13 @@
     max-width: none;
     width: 100%;
   }
-  //
-  //@include vp-767 {
-  //  width: 270px;
-  //}
+
+  @include vp-767 {
+    &::after {
+      width: 40px;
+      height: 40px;
+    }
+  }
 }
 
 .cards__item a {
@@ -122,30 +109,19 @@
   right: 0;
   z-index: -1;
   width: 100%;
-  //max-width: 260px;
   height: 650px;
+  background-color: $color-rhino;
 
   @include vp-1023 {
     height: 250px;
   }
-
-  //@include vp-767 {
-  //  width: 270px;
-  //}
 }
 
 .cards__item img {
   object-fit: cover;
   height: 100%;
   width: 100%;
-
-  //@include vp-1023 {
-  //  width: 309px;
-  //}
-  //
-  //@include vp-767 {
-  //  width: 270px;
-  //}
+  background-color: $color-rhino;
 }
 
 .cards__item h3 {
@@ -165,11 +141,14 @@
     left: 45px;
     width: 21%;
   }
-  //
-  //@include vp-767 {
-  //  top: 341px;
-  //  left: 48%;
-  //}
+
+  @include vp-767 {
+    font-size: 18px;
+    top: 25px;
+    left: 30px;
+    width: 41%;
+    max-width: 150px;
+  }
 }
 
 .cards__item:hover {
