@@ -36,11 +36,11 @@
   padding-top: 16px;
 
   @include vp-1023 {
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   @include vp-767 {
-    padding-top: 15px;
+    padding-top: 5px;
   }
 }
 
@@ -63,6 +63,8 @@
 
   @include vp-1023 {
     padding-left: 20px;
+    min-width: 20px;
+    min-height: 20px;
   }
 
   &:hover::before,
@@ -93,7 +95,7 @@
   }
 
   @include vp-1023 {
-    margin-right: 3.3vw;
+    margin-right: 3.5vw;
   }
 
   @include vp-767 {

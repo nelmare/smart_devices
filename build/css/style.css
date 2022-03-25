@@ -762,6 +762,20 @@ button,
   background-position: center;
   background-size: cover;
   margin-top: 102px;
+  position: relative;
+}
+
+.intro::before {
+  content: "";
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(71.72%, rgba(25, 32, 36, 0.7)), to(rgba(25, 32, 36, 0)));
+  background: -o-linear-gradient(top, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
+  background: linear-gradient(180deg, rgba(25, 32, 36, 0.7) 71.72%, rgba(25, 32, 36, 0) 100%);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
 }
 
 .intro h1 {
@@ -770,6 +784,8 @@ button,
   padding: 0 30px 0 0;
   font-weight: 700;
   margin-bottom: 31px;
+  z-index: 2;
+  position: relative;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 80px;
   line-height: 94px;
@@ -786,6 +802,8 @@ button,
   color: #f2f5f6;
   width: 57%;
   margin-bottom: 37px;
+  z-index: 2;
+  position: relative;
 }
 
 .intro a {
@@ -798,6 +816,8 @@ button,
   vertical-align: middle;
   width: auto;
   padding: 15px 27px 18px 27px;
+  z-index: 2;
+  position: relative;
 }
 
 .intro a:hover {
@@ -1180,6 +1200,7 @@ button,
   position: relative;
   font-size: 14px;
   line-height: 19px;
+  background-color: #39475e;
 }
 
 .cards__item::after {
@@ -1219,7 +1240,6 @@ button,
   z-index: -1;
   width: 100%;
   height: 650px;
-  background-color: #39475e;
 }
 
 .cards__item img {
@@ -1227,7 +1247,6 @@ button,
   object-fit: cover;
   height: 100%;
   width: 100%;
-  background-color: #39475e;
 }
 
 .cards__item h3 {
@@ -1668,11 +1687,13 @@ button,
   }
 
   .main-nav address {
-    padding-top: 20px;
+    padding-top: 10px;
   }
 
   .main-nav__link {
     padding-left: 20px;
+    min-width: 20px;
+    min-height: 20px;
   }
 
   .main-nav__link--email {
@@ -1680,7 +1701,7 @@ button,
   }
 
   .main-nav__link--phone {
-    margin-right: 3.3vw;
+    margin-right: 3.5vw;
   }
 
   .main-nav__link span {
@@ -1927,7 +1948,7 @@ button,
   }
 
   .main-nav address {
-    padding-top: 15px;
+    padding-top: 5px;
   }
 
   .main-nav__link--email {

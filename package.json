@@ -23,7 +23,8 @@
     "*.js",
     "source/**/*.html",
     "source/**/*.pug",
-    "source/js/**/*.js",
+    "source/js/modules/*.js",
+    "source/js/utils/*.js",
     "source/img/**/*.svg",
     "source/sass/**/*.{sass,scss}"
   ],
