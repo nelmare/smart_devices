@@ -37,11 +37,16 @@ const accordion = (function () {
       _mainElement.addEventListener('click', _actionClick);
     };
 
+    const _focusListeners = function () {
+      _mainElement.addEventListener('focusin', _actionClick);
+    };
+
     return {
       init(el) {
         _mainElement = (typeof el === 'string' ? document.querySelector(el) : el);
         _items = _mainElement.querySelectorAll('.accordion__item');
         _setupListeners();
+        _focusListeners();
       },
     };
   };
