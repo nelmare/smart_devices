@@ -672,9 +672,9 @@ button,
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -685,6 +685,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 8.5vw;
 }
 
 .main-nav address {
@@ -697,7 +698,11 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   font-style: normal;
-  padding-top: 16px;
+  width: 38.8%;
+  margin-right: 7.7vw;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .main-nav__link {
@@ -705,17 +710,16 @@ button,
   display: -ms-flexbox;
   display: flex;
   padding-left: 35px;
+  padding-top: 16px;
   position: relative;
+  margin-right: 15px;
 }
 
 .main-nav__link::before {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 0;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   width: 20px;
   height: 20px;
   background-repeat: no-repeat;
@@ -725,10 +729,6 @@ button,
 .main-nav__link:hover::before,
 .main-nav__link:hover {
   opacity: 0.8;
-}
-
-.main-nav__link--email {
-  margin-right: 6.3vw;
 }
 
 .main-nav__link--email::before {
@@ -746,7 +746,7 @@ button,
   border: 1px solid #f2f5f6;
   border-radius: 3px;
   max-width: 160px;
-  margin: 0 60px 0 0;
+  margin: 0;
   padding-top: 10px;
   padding-bottom: 12px;
   margin-top: 5px;
@@ -1186,8 +1186,6 @@ button,
   display: grid;
   -ms-grid-columns: (28.6%)[3];
   grid-template-columns: repeat(3, 28.6%);
-  -ms-grid-rows: 650px;
-  grid-template-rows: 650px;
   grid-gap: 7%;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
@@ -1201,6 +1199,7 @@ button,
   font-size: 14px;
   line-height: 19px;
   background-color: #39475e;
+  min-height: 650px;
 }
 
 .cards__item::after {
@@ -1679,6 +1678,25 @@ button,
   }
 }
 
+@media (max-width: 1365px) {
+  .main-nav__logo {
+    margin-right: 5.5vw;
+  }
+
+  .main-nav address {
+    margin-right: 4.7vw;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 1179px) {
+  .main-nav address {
+    width: 42%;
+  }
+}
+
 @media (max-width: 1023px) {
   .page-header {
     padding-top: 20px;
@@ -1686,14 +1704,30 @@ button,
     position: static;
   }
 
+  .main-nav {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  .main-nav__logo {
+    margin-right: 20px;
+  }
+
   .main-nav address {
-    padding-top: 10px;
+    margin-right: 0;
+    width: auto;
   }
 
   .main-nav__link {
     padding-left: 20px;
     min-width: 20px;
     min-height: 20px;
+    margin-top: 10px;
+  }
+
+  .main-nav__link::before {
+    top: 0;
   }
 
   .main-nav__link--email {
@@ -1843,14 +1877,13 @@ button,
   .cards ul {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    -ms-grid-rows: (250px)[3];
-    grid-template-rows: repeat(3, 250px);
     grid-gap: 30px;
   }
 
   .cards__item {
     max-width: none;
     width: 100%;
+    min-height: 250px;
   }
 
   .cards__image-wrapper {
@@ -1935,11 +1968,14 @@ button,
   .main-nav {
     padding-top: 0;
     padding-bottom: 0;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
   }
 
   .main-nav__logo {
     width: 35px;
     height: 35px;
+    margin-right: 65px;
   }
 
   .main-nav__logo img {
@@ -1947,8 +1983,8 @@ button,
     height: 35px;
   }
 
-  .main-nav address {
-    padding-top: 5px;
+  .main-nav__link {
+    margin-top: 5px;
   }
 
   .main-nav__link--email {
@@ -2124,6 +2160,7 @@ button,
     padding: 31px 25px 35px 25px;
     min-height: auto;
     max-width: 375px;
+    overflow: auto;
   }
 
   .advantages__item h3 {

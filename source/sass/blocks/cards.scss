@@ -42,13 +42,11 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, 28.6%);
-  grid-template-rows: 650px;
   grid-gap: 7%;
   justify-content: start;
 
   @include vp-1023 {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 250px);
     grid-gap: 30px;
   }
 }
@@ -60,6 +58,7 @@
   font-size: 14px;
   line-height: 19px;
   background-color: $color-rhino;
+  min-height: 650px;
 
   &::after {
     content: "";
@@ -79,6 +78,7 @@
   @include vp-1023 {
     max-width: none;
     width: 100%;
+    min-height: 250px;
   }
 
   @include vp-767 {
