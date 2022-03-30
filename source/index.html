@@ -197,7 +197,6 @@
                   placeholder="Ваш вопроc" rows="5"></textarea>
               </div>
               <div class="form__group form__group--footer">
-                <button class="btn" type="submit">Задать вопрос</button>
                 <div class="form__checkbox-wrapper">
                   <label for="personal-data">
                     <input class="visually-hidden" type="checkbox" name="consent-personal-data" id="personal-data"
@@ -206,6 +205,7 @@
                     Я&nbsp;согласен на&nbsp;обработку персональных данных
                   </label>
                 </div>
+                <button class="btn" type="submit">Задать вопрос</button>
               </div>
             </form>
           </div>
@@ -238,8 +238,9 @@
           </div>
           <div id="accordion" class="page-footer__accordion accordion">
             <section class="accordion__item is-nojs" data-text="accordion">
-              <button class="accordion__heading btn" type="button">Разделы сайта</button>
-              <article class="accordion__content accordion__content--links" tabindex="0">
+              <h3>Разделы сайта</h3>
+              <button class="accordion__heading btn" type="button" aria-label="Открыть содержимое/Скрыть"></button>
+              <div class="accordion__content accordion__content--links">
               <ul class="accordion__nav-list">
                 <li>
                   <ul class="accordion__list">
@@ -271,18 +272,19 @@
                   </ul>
                 </li>
               </ul>
-              </article>
+              </div>
             </section>
             <section class="accordion__item is-nojs" data-text="accordion">
-              <button class="accordion__heading btn" type="button">Наш офис</button>
-              <article class="accordion__content accordion__content--contacts" tabindex="0">
+              <h3>Наш офис</h3>
+              <button class="accordion__heading btn" type="button" aria-label="Открыть содержимое/Скрыть"></button>
+              <div class="accordion__content accordion__content--contacts">
                 <address>
                   <a href="#" class="accordion__link accordion__link--address">г. Мытищи, Олимпийский проспект, д.10</a>
                   <a href="tel:+84955894050" class="accordion__link">+7 (495) 589-40-50</a>
                   <a href="tel:+89253895829" class="accordion__link">+7 (925) 389-58-29</a>
                   <a href="tel:+89253647813" class="accordion__link">+7 (925) 364-78-13</a>
                 </address>
-              </article>
+              </div>
             </section>
           </div>
         </div>
@@ -310,7 +312,6 @@
                 placeholder="Ваш вопроc" rows="5"></textarea>
             </div>
             <div class="form__group form__group--footer-modal">
-              <button class="btn modal__btn" type="submit">Отправить</button>
               <div class="form__checkbox-wrapper form__checkbox-wrapper--modal">
                 <label for="personal-data-callback">
                   <input class="visually-hidden" type="checkbox" name="consent-personal-data" id="personal-data-callback"
@@ -319,9 +320,10 @@
                   Я согласен на обработку персональных данных
                 </label>
               </div>
+              <button class="btn modal__btn" type="submit">Отправить</button>
             </div>
           </form>
-          <button class="modal__close-btn" type="button" aria-label="Закрыть попап" data-close-modal>
+          <button class="modal__close-btn" type="button" aria-label="Закрыть модальное окно" data-close-modal>
             <svg width="20" height="20">
               <use xlink:href="img/sprite_auto.svg#icon-close"></use>
             </svg>

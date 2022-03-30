@@ -672,9 +672,9 @@ button,
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -685,7 +685,7 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 8.5vw;
+  margin-right: 30px;
 }
 
 .main-nav address {
@@ -698,11 +698,11 @@ button,
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   font-style: normal;
-  width: 38.8%;
-  margin-right: 7.7vw;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  margin-right: 18px;
+  width: 476px;
 }
 
 .main-nav__link {
@@ -750,6 +750,7 @@ button,
   padding-top: 10px;
   padding-bottom: 12px;
   margin-top: 5px;
+  margin-right: 62px;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -866,7 +867,7 @@ button,
 
 .social {
   padding: 0;
-  margin: 34px 0 30px 0;
+  margin: 30px 0 30px 0;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -882,7 +883,7 @@ button,
 }
 
 .social li {
-  margin: 0 9px 10px 16px;
+  margin: 0 2px 10px 13px;
 }
 
 .social a {
@@ -895,8 +896,8 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
 }
 
 .social a:hover,
@@ -920,12 +921,13 @@ button,
   column-gap: 3.5%;
 }
 
-.accordion__item:hover::before,
-.accordion__item:hover::after {
+.accordion__heading:hover::before,
+.accordion__heading:hover::after {
   opacity: 0.8;
 }
 
-.accordion__heading {
+.accordion h3 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 16px;
@@ -936,11 +938,23 @@ button,
   -ms-flex-align: center;
   align-items: center;
   color: #ffffff;
-  background-color: transparent;
   margin-top: 0;
   padding-top: 6px;
   padding-left: 0;
-  padding-bottom: 6px;
+  padding-bottom: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.accordion__heading {
+  display: none;
+}
+
+.accordion__heading:hover::before,
+.accordion__heading:hover::after,
+.accordion__heading:focus::before,
+.accordion__heading:focus::after {
+  background-color: #00b2ff;
 }
 
 .accordion__nav-list,
@@ -1019,6 +1033,9 @@ button,
   -ms-flex-direction: column;
   flex-direction: column;
   font-style: normal;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .accordion__content--contacts a {
@@ -1416,6 +1433,20 @@ button,
   -ms-flex-align: start;
   align-items: flex-start;
   margin-top: 8px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+
+.form .form__group--footer-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 .form button {
@@ -1449,6 +1480,12 @@ button,
   font-size: 14px;
   line-height: 16px;
   color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .form__checkbox-wrapper span {
@@ -1678,6 +1715,27 @@ button,
   }
 }
 
+@media (max-width: 1919px) {
+  .main-nav {
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .main-nav__logo {
+    margin-right: 8.5vw;
+  }
+
+  .main-nav address {
+    margin-right: 7.7vw;
+    width: 38.8%;
+  }
+
+  .main-nav a.btn {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 1365px) {
   .main-nav__logo {
     margin-right: 5.5vw;
@@ -1798,11 +1856,11 @@ button,
 
   .social {
     margin: 0;
-    margin-right: -8px;
+    margin-right: -14px;
   }
 
   .social li {
-    margin-right: 8px;
+    margin: 5px 6px 5px 10px;
   }
 
   .accordion {
@@ -2031,7 +2089,7 @@ button,
   }
 
   .page-footer__container {
-    row-gap: 18px;
+    row-gap: 20px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -2049,19 +2107,12 @@ button,
   }
 
   .social {
-    margin-top: 20px;
+    margin-top: 11px;
   }
 
   .social li {
-    margin-right: 15px;
-    margin-left: 11px;
-  }
-
-  .social a {
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-    width: auto;
+    margin-right: 12px;
+    margin-left: 3px;
   }
 
   .accordion {
@@ -2085,40 +2136,55 @@ button,
     border-top: none;
   }
 
-  .accordion__item::before {
+  .accordion__item.is-shown {
+    padding-bottom: 13px;
+  }
+
+  .accordion__item.is-shown .accordion__heading::after {
+    display: none;
+  }
+
+  .accordion__item.is-nojs .accordion__heading {
+    display: none;
+  }
+
+  .accordion h3 {
+    margin-bottom: 0;
+  }
+
+  .accordion__heading {
+    display: inline-block;
+    vertical-align: middle;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    right: 19px;
+    top: 14px;
+    background-color: transparent;
+    margin: 0;
+  }
+
+  .accordion__heading::before {
     content: "";
     width: 15px;
     height: 1px;
     background-color: #f8fdff;
-    top: 28px;
-    right: 26px;
+    top: 14px;
+    right: 8px;
     position: absolute;
   }
 
-  .accordion__item::after {
+  .accordion__heading::after {
     content: "";
     width: 15px;
     height: 1px;
     background-color: #f8fdff;
-    top: 28px;
-    right: 26px;
+    top: 15px;
+    right: 8px;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
     position: absolute;
-  }
-
-  .accordion__item.is-shown::after {
-    display: none;
-  }
-
-  .accordion__item.is-nojs::before,
-  .accordion__item.is-nojs::after {
-    display: none;
-  }
-
-  .accordion__heading {
-    margin-bottom: 0;
   }
 
   .accordion__content {
@@ -2128,10 +2194,7 @@ button,
   .accordion__item.is-shown .accordion__content,
   .accordion__item.is-nojs .accordion__content {
     display: block;
-  }
-
-  .accordion article {
-    padding-top: 4px;
+    padding-top: 7px;
     font-size: 14px;
   }
 
@@ -2161,6 +2224,8 @@ button,
     min-height: auto;
     max-width: 375px;
     overflow: auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .advantages__item h3 {
@@ -2279,9 +2344,9 @@ button,
 
   .form .form__group--footer {
     -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
     margin-top: 4px;
   }
 
