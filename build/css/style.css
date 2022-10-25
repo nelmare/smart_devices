@@ -821,6 +821,15 @@ button,
   position: relative;
 }
 
+.intro a:hover {
+  background-color: #019bdf;
+  opacity: 1;
+}
+
+.intro a:focus {
+  opacity: 1;
+}
+
 .page-footer {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -1656,15 +1665,6 @@ button,
 
   .main-nav a.btn:hover {
     background-color: #00b2ff;
-    opacity: 1;
-  }
-
-  .intro a:hover {
-    background-color: #019bdf;
-    opacity: 1;
-  }
-
-  .intro a:focus {
     opacity: 1;
   }
 
