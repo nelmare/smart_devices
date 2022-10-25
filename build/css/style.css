@@ -821,15 +821,6 @@ button,
   position: relative;
 }
 
-.intro a:hover {
-  background-color: #019bdf;
-  opacity: 1;
-}
-
-.intro a:focus {
-  opacity: 1;
-}
-
 .page-footer {
   padding-top: 50px;
   padding-bottom: 50px;
@@ -948,13 +939,6 @@ button,
 
 .accordion__heading {
   display: none;
-}
-
-.accordion__heading:hover::before,
-.accordion__heading:hover::after,
-.accordion__heading:focus::before,
-.accordion__heading:focus::after {
-  background-color: #00b2ff;
 }
 
 .accordion__nav-list,
@@ -1673,6 +1657,22 @@ button,
   .main-nav a.btn:hover {
     background-color: #00b2ff;
     opacity: 1;
+  }
+
+  .intro a:hover {
+    background-color: #019bdf;
+    opacity: 1;
+  }
+
+  .intro a:focus {
+    opacity: 1;
+  }
+
+  .accordion__heading:hover::before,
+  .accordion__heading:hover::after,
+  .accordion__heading:focus::before,
+  .accordion__heading:focus::after {
+    background-color: #00b2ff;
   }
 
   .about button:hover {
