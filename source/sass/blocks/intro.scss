@@ -118,13 +118,15 @@
   z-index: 2;
   position: relative;
 
-  &:hover {
-    background-color: $color-pacific-blue;
-    opacity: 1;
-  }
+  @media (hover: hover), screen and (min-width: 0\0) {
+    &:hover {
+      background-color: $color-pacific-blue;
+      opacity: 1;
+    }
 
-  &:focus {
-    opacity: 1;
+    &:focus {
+      opacity: 1;
+    }
   }
 
   @include vp-1023 {
